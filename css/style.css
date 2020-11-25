@@ -23,19 +23,29 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     height: 100vh;
 }
 
+@media (min-width: 1200px) {
+    body {
+        background: url(../images/bg-pattern-top.svg) no-repeat -720px -900px/cover,
+        url(../images/bg-pattern-bottom.svg) no-repeat 580px 310px/cover;
+        background-color: var(--dark-cyan);
+    }
+}
+
 .card {
     width: 85%;
+    min-width: 272px;
+    max-width: 350px;
     border-radius: 1rem;
     background: #fff url(../images/bg-pattern-card.svg) no-repeat;
     text-align: center;
     padding-top: 5.5rem;
     padding-bottom: 14px;
+    box-shadow: 8px 1rem 2rem 1rem rgba(0, 0, 0, .12);
+    margin: auto;
 }
 
 img {
@@ -83,7 +93,6 @@ img {
 .attribution {
     font-size: 11px;
     text-align: center;
-    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
